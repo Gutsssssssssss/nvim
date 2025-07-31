@@ -1,8 +1,5 @@
 # My Neovim Configuration
 
-My personal Neovim configuration.
-It's very similar with kickstart but I reorganized
-
 ## Structure
 
 - init.lua
@@ -14,7 +11,7 @@ It's very similar with kickstart but I reorganized
 
 ## References
 
-Thank you for the great videos and configs!
+Thank you for [yanmoyy](https://github.com/yanmoyy)
 
 #### Youtube videos
 

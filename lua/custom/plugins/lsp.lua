@@ -104,7 +104,6 @@ return {
 		local servers = {
 			--WEB...
 			html = {},
-			htmx = {},
 			cssls = {},
 			ts_ls = {},
 
@@ -158,6 +157,7 @@ return {
 			"pylint",
 			"golangci-lint",
 			"hadolint",
+			"goimports",
 		})
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 		require("mason-lspconfig").setup({

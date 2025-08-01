@@ -1,5 +1,5 @@
 return {
-	"diegoulloao/neofusion.nvim",
+	"morhetz/gruvbox",
 	priority = 1000,
 	config = function()
 		-- -- Default options:
@@ -27,6 +27,6 @@ return {
 		-- 	transparent_mode = false,
 		-- })
 
-		vim.cmd([[ colorscheme neofusion ]])
+		vim.cmd([[ colorscheme gruvbox]])
 	end,
 }

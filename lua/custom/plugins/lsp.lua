@@ -146,6 +146,13 @@ return {
 			},
 		}
 
+		require("mason").setup({
+			registries = {
+				"github:Crashdummyy/mason-registry",
+				"github:mason-org/mason-registry",
+			},
+		})
+
 		local ensure_installed = vim.tbl_keys(servers or {})
 		vim.list_extend(ensure_installed, {
 			"stylua", -- Used to format Lua code
@@ -158,6 +165,7 @@ return {
 			"golangci-lint",
 			"hadolint",
 			"goimports",
+			"roslyn",
 		})
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 		require("mason-lspconfig").setup({
@@ -168,8 +176,8 @@ return {
 
 		for server_name, server_config in pairs(servers) do
 			local config = vim.tbl_deep_extend("force", { capabilities = capabilities }, server_config)
-			vim.lsp.enable(server_name)
 			vim.lsp.config(server_name, config)
+			vim.lsp.enable(server_name)
 		end
 	end,
 }

@@ -1,5 +1,5 @@
 return {
-	"morhetz/gruvbox",
+	"bluz71/vim-moonfly-colors",
 	priority = 1000,
 	config = function()
 		-- -- Default options:
@@ -27,6 +27,6 @@ return {
 		-- 	transparent_mode = false,
 		-- })
 
-		vim.cmd([[ colorscheme gruvbox]])
+		vim.cmd([[ colorscheme moonfly ]])
 	end,
 }

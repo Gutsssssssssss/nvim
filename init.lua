@@ -18,7 +18,7 @@ end
 
 ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
-
+vim.opt.clipboard = "unnamedplus"
 
 -- Set up lazy, and load my `lua/custom/plugins/` folder
 require("lazy").setup({ import = "custom/plugins" }, {

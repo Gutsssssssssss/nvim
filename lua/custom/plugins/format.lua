@@ -15,7 +15,7 @@ return { -- Autoformat
 	config = function()
 		require("conform").setup({
 			format_on_save = function(bufnr)
-				local disable_filetypes = { c = true, cpp = true }
+				local disable_filetypes = {}
 				if
 					vim.g.disable_autoformat
 					or vim.b[bufnr].disable_autoformat
@@ -42,9 +42,14 @@ return { -- Autoformat
 				sql = { "sql_formatter" },
 				go = { "goimports" },
 				gomod = { "go_mod_formatter" },
+				c = { "clang-format" },
+				cpp = { "clang-format" },
 				["*"] = { "injected" }, -- enables injected-lang formatting for all filetypes
 			},
 			formatters = {
+				["clang-format"] = {
+					prepend_args = { "-style={BasedOnStyle: llvm, BreakBeforeBraces: Allman, IndentWidth: 4}" },
+				},
 				djlint = {
 					prepend_args = {
 						"--line-break-after-multiline-tag",
